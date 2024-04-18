@@ -12,5 +12,5 @@ data class ClassificationAndStats<out T : StatsEntry>(
     val stats: T
 ) {
     @JsonGetter("stats")
-    fun getValues(): Map<Aggregation, Int> = stats.values
+    fun getValues(): Map<Aggregation, Int> = stats.shouldNotAppearInJson
 }

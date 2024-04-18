@@ -4,7 +4,7 @@ import io.micronaut.core.annotation.Introspected
 
 @Introspected
 data class AfterCareStatsEntry(
-    override val values: MutableMap<Aggregation, Int> = AggregationUtils.buildInitialValues(AFTERCARE_AGGREGATIONS)
+    override val shouldNotAppearInJson: MutableMap<Aggregation, Int> = AggregationUtils.buildInitialValues(AFTERCARE_AGGREGATIONS)
 ) : StatsEntry {
     companion object {
         val AFTERCARE_AGGREGATIONS = listOf(
